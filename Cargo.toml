@@ -1,0 +1,25 @@
+[package]
+name = "h1-emergence"
+version = "0.1.0"
+edition = "2021"
+description = "H1 cohomology emergence detection — replacing 12,000-line ML anomaly detection with 127 lines of algebraic topology"
+authors = ["SuperInstance"]
+license = "MIT"
+
+[[bin]]
+name = "h1"
+path = "src/bin/h1.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rand = "0.8"
+petgraph = "0.6"
+
+[dev-dependencies]
+tempfile = "3"
+
+[[example]]
+name = "h1-demo"
+path = "examples/h1-demo.rs"
